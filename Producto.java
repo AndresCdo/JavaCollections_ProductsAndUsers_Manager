@@ -1,10 +1,12 @@
 public class Producto {
+    // Instance variables
     private int id;
     private String nombre;
     private int cantidad;
     private String categoria;
     private double precio;
 
+    // Getters and setters
     public int getId() {
         return this.id;
     }
@@ -45,8 +47,9 @@ public class Producto {
         this.precio = precio;
     }
 
+    // Constructors
     public Producto(){}
-    
+
     public Producto(String nombre, int cantidad, String categoria, double precio) {
         this.setNombre(nombre);
         this.setCantidad(cantidad);
@@ -54,7 +57,8 @@ public class Producto {
         this.setPrecio(precio);
     }
 
-    //no elimine ni modifique este metodo
+    // String representation of the object
+    // Do not delete or modify this method
     @Override
     public String toString() {
         return "Producto{" + "id=" + id + ", nombre=" + nombre + ", cantidad=" + cantidad + ", categoria=" + categoria + ", precio=" + precio + '}';

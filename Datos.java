@@ -1,32 +1,35 @@
-import javax.swing.*; // Se importa todas las clases necesarias para realizar interfaces gráficas
+import javax.swing.*;
 
-public class Datos extends JFrame{ // Creamos una clase que hereda de la clase JFrame
-    // inicializamos los atributos donde se va almacenar el objeto tipo JLabel
-    private JLabel label1,label2; 
+/**
+ * A class for creating a GUI window to input user data.
+ */
+public class Datos extends JFrame {
 
-    public Datos() { //Constructor de la clase Datos
+    private JLabel label1, label2; // JLabel attributes for storing label objects
+
+    /**
+     * Constructor for creating a Datos object.
+     */
+    public Datos() {
         JPanel panel1 = new JPanel();
-        // Se crea un objeto con el texto que tendrá la etiqueta
-        label1=new JLabel("Digite los datos del usuario.");
-        panel1.add(label1);
-        // Con este método agrega la etiqueta a la ventana o JFrame
-        add(label1);
-        // Se crea un objeto con el texto que tendrá la etiqueta
-        label2=new JLabel("Version 0.0.1");
-        panel1.add(label2);
-        add(panel1);
-    } 
 
-    public static void main(String[] ar) {
-        Datos formulario1=new Datos();
-        /* Este método nos permite definir la posición y tamaño de la ventana. 
-           En este caso se ubica en la fila 10 columna 5, con altura 150 pixeles
-           y ancho 200 pixeles.  */
-        formulario1.setBounds(50,50,250,150);  
-        // Este método nos permite definir la visibilidad de la ventana
-        formulario1.setVisible(true); 
-        formulario1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); 
-        /* Este método nos permite definir la operación a realizar una vez se cierre la ventana. 
-        En este caso salir de la aplicación. */
+        label1 = new JLabel("Digite los datos del usuario."); // Create label1 object
+        panel1.add(label1); // Add label1 to panel1
+        add(panel1); // Add panel1 to the window
+
+        label2 = new JLabel("Version 0.0.1"); // Create label2 object
+        panel1.add(label2); // Add label2 to panel1
+        add(panel1); // Add panel1 to the window
+    }
+
+    /**
+     * The main method that runs the application.
+     * @param args command line arguments
+     */
+    public static void main(String[] args) {
+        Datos formulario1 = new Datos(); // Create a new Datos object
+        formulario1.setBounds(50, 50, 250, 150); // Set the position and size of the window
+        formulario1.setVisible(true); // Make the window visible
+        formulario1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // Close the application when the window is closed
     }
 }
